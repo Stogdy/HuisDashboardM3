@@ -1,0 +1,15 @@
+img{
+    width: 250px;
+
+    justify-content: center;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav{
+    background-color: rgb(154, 228, 179);
+    padding: 0.001px;
+    text-align: center;
+}
