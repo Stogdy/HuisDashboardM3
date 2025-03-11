@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <header>
+    <img class="css--homePilotLogoText" src="Images/Logo/homepilot.png" alt="">
+    <a href="grafieken.html"><button class="css--button css--activeButton">Grafieken</button></a>
+    <a href="settings.html"><button class="css--button">Instellingen</button></a>
+    <a href="contact.html"><button class="css--button">Contact</button></a>
+  </header>
+
+  <main>
+    <div style="display: flex; justify-content: space-between; align-items: center; padding: 4em;">
+
+      <div>
+        <iframe class="Buienradar"
+        src="https://gadgets.buienradar.nl/gadget/zoommap/?lat=52.37403&lng=4.88969&overname=2&zoom=8&naam=Amsterdam&size=3&voor=1"
+        scrolling=no width=550 height=512 frameborder=no></iframe>
+      </div>
+
+      <div class="tomorrow" data-location-id="077710" data-language="EN" data-unit-system="METRIC" data-skin="light"
+        data-widget-type="upcoming">
+        <a href="https://www.tomorrow.io/weather-api/" rel="nofollow noopener noreferrer" target="_blank"
+          style="position: fixed; bottom: 0; transform: translateX(-50%); left: 50%;">
+        </a>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer>
+    <p>HomePilot | Adres: Contactweg 36, Amsterdam | Telefoonnummer: +31 06 97395610 | Email: info@homepilot.com</p>
+  </footer>
+
+</body>
+
+<script>
+  (function (d, s, id) {
+    if (d.getElementById(id)) {
+      if (window.__TOMORROW__) {
+        window.__TOMORROW__.renderWidget();
+      }
+      return;
+    }
+    const fjs = d.getElementsByTagName(s)[0];
+    const js = d.createElement(s);
+    js.id = id;
+    js.src = "https://www.tomorrow.io/v1/widget/sdk/sdk.bundle.min.js";
+
+    fjs.parentNode.insertBefore(js, fjs);
+  })(document, 'script', 'tomorrow-sdk');
+</script>
+
+</html>
