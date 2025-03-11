@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="grafieken.css">
+    <link rel="stylesheet" href="weer.js">
+    <title>Dashboard</title>
+</head>
+<body>
+    <a href="index.html">terug</a>
+
+
+    <iframe src="https://gadgets.buienradar.nl/gadget/zoommap/?lat=52.37403&lng=4.88969&overname=2&zoom=8&naam=Amsterdam&size=3&voor=1" scrolling=no width=550 height=512 frameborder=no></iframe>
+    <section>
+        <div id="date"></div>
+        <div class="weather">
+          <div id="cityName"></div>
+          <img src="" id="icon">
+          <div id="description"></div>
+          <div id="temp"></div>
+        </div>
+          <div class="switchBtn">
+            <button class="switch" onclick="cfSwitch()">Celsius (°C ) / Fahrenheit (°F)</button>
+          </div>
+      </section>
+</body>
+</html>
