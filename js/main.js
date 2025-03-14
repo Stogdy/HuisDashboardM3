@@ -14,11 +14,13 @@ const greenColorButton = document.getElementById("js--greenColorButton");
 const redColorButton = document.getElementById("js--redColorButton");
 const blueColorButton = document.getElementById("js--blueColorButton");
 const orangeColorButton = document.getElementById("js--orangeColorButton");
+const camoColorButton = document.getElementById("js--camoColorButton");
 
 var greenColorButtonActive = true;
 var redColorButtonActive = false;
 var blueColorButtonActive = false;
 var orangeColorButtonActive = false;
+var camoColorButtonActive = false;
 const header = document.getElementById("js--header");
 const footer = document.getElementById("js--footer");
 const buttons = document.getElementsByClassName("js--button");
@@ -181,6 +183,43 @@ orangeColorButton.onclick = function(){
   button.style.background = headerLighter;
   }
   orangeColorButtonActive = true;
+
+}
+
+camoColorButton.onclick = function(){
+  r=102;
+  g=120;
+  b=95;
+  let headerNormal= rgbToHex(r,g,b);
+  console.log(r + " " +g + " "+b);
+
+  r= 215;
+  g= 211;
+  b= 191;
+  let headerLighter= rgbToHex(r,g,b);
+  console.log(r + " " +g + " "+b);
+
+  r= 75; 
+  g= 89; 
+  b= 69;
+  let footerDarker= rgbToHex(r,g,b);
+  console.log(r + " " +g + " "+b);
+
+  r= 173; 
+  g= 157; 
+  b= 132;
+  let activeButtonColor= rgbToHex(r,g,b);
+
+  activeButton.style.background = activeButtonColor;
+  header.style.background = headerNormal;
+  footer.style.background = footerDarker;
+  console.log("------------------------");
+
+  for (let i = 0; i < buttons.length; i++) {
+      const button = buttons[i];
+  button.style.background = headerLighter;
+  }
+  camoColorButtonActive = true;
 
 }
 
