@@ -56,6 +56,24 @@ function componentToHex(c) {
     return hex.length == 1 ? "0" + hex : hex;
   }
   
-  function rgbToHex(r, g, b) {
+function rgbToHex(r, g, b) {
     return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
   }
+
+// const tijdVak = getElementById("js--tijdVak");  
+const tijdVak = document.getElementById("js--tijdVak");
+
+
+function tijdCalc(){
+    var d = new Date();
+
+    var uur = d.getHours();
+    var minuten = d.getMinutes();
+
+    tijd = uur+":"+minuten;
+
+  }
+
+tijdCalc();
+console.log(tijd);
+tijdVak.innerText = tijd;
