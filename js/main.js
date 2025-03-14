@@ -184,20 +184,20 @@ orangeColorButton.onclick = function(){
 
 }
 
-if(greenColorButtonActive === true){
-  document.cookie = "scheme=greenScheme; expires=Fri, 1 Jan 2100 12:00:00 UTC; path=../";
-}
-else if(redColorButtonActive === true){
-  document.cookie = "scheme=redScheme; expires=Fri, 1 Jan 2100 12:00:00 UTC; path=../";
-}
-else if(blueColorButtonActive === true){
-  document.cookie = "scheme=blueScheme; expires=Fri, 1 Jan 2100 12:00:00 UTC; path=../";
-}
-else if(orangeColorButtonActive === true){
-  document.cookie = "scheme=orangeScheme; expires=Fri, 1 Jan 2100 12:00:00 UTC; path=../";
-}
+// if(greenColorButtonActive === true){
+//   document.cookie = "scheme=greenScheme; expires=Fri, 1 Jan 2100 12:00:00 UTC; path=../";
+// }
+// else if(redColorButtonActive === true){
+//   document.cookie = "scheme=redScheme; expires=Fri, 1 Jan 2100 12:00:00 UTC; path=../";
+// }
+// else if(blueColorButtonActive === true){
+//   document.cookie = "scheme=blueScheme; expires=Fri, 1 Jan 2100 12:00:00 UTC; path=../";
+// }
+// else if(orangeColorButtonActive === true){
+//   document.cookie = "scheme=orangeScheme; expires=Fri, 1 Jan 2100 12:00:00 UTC; path=../";
+// }
 
-console.log(orangeColorButton.cookie);
+// console.log(orangeColorButton.cookie);
 
 function componentToHex(c) {
     var hex = c.toString(16);
