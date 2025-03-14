@@ -123,11 +123,13 @@ header{
     border-radius: 1.2rem;
     margin-top: 3rem;
     margin-left: 3rem;
+    display:
 }
 .css--colorPicker{
     width: 10rem;
     height: 10rem;
     border: none;
+    display:none;
 }
 .css--redColorButton{
     padding: 5rem 5rem;
@@ -140,6 +142,10 @@ header{
 .css--greenColorButton{
     padding: 5rem 5rem;
     background: green;
+}
+.css--orangeColorButton{
+    padding: 5rem 5rem;
+    background: orange;
 }
 
 footer{

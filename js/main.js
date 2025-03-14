@@ -13,6 +13,7 @@ const pickedColor = document.getElementById("js--colorPicker");
 const greenColorButton = document.getElementById("js--greenColorButton");
 const redColorButton = document.getElementById("js--redColorButton");
 const blueColorButton = document.getElementById("js--blueColorButton");
+const orangeColorButton = document.getElementById("js--orangeColorButton");
 const header = document.getElementById("js--header");
 const footer = document.getElementById("js--footer")
 const buttons = document.getElementsByClassName("js--button")
@@ -142,6 +143,40 @@ blueColorButton.onclick = function(){
   r= 45;
   g= 46;
   b= 92;
+  let footerDarker= rgbToHex(r,g,b);
+  console.log(r + " " +g + " "+b);
+
+  header.style.background = headerNormal;
+  footer.style.background = footerDarker;
+  console.log("------------------------");
+
+  for (let i = 0; i < buttons.length; i++) {
+      const button = buttons[i];
+  button.style.background = headerLighter;
+  }
+}
+
+orangeColorButton.onclick = function(){
+  let r= MakeHexComponentDarker(pickedColor.value,1,0.6);
+  let g= MakeHexComponentDarker(pickedColor.value,3,0.6);
+  let b= MakeHexComponentDarker(pickedColor.value,5,0.6);
+  console.log(r + " " +g + " "+b);
+
+  r=235;
+  g=135;
+  b=0;
+  let headerNormal= rgbToHex(r,g,b);
+  console.log(r + " " +g + " "+b);
+
+  r= 255;
+  g= 155;
+  b= 0;
+  let headerLighter= rgbToHex(r,g,b);
+  console.log(r + " " +g + " "+b);
+
+  r= 205;
+  g= 105;
+  b= 0;
   let footerDarker= rgbToHex(r,g,b);
   console.log(r + " " +g + " "+b);
 
