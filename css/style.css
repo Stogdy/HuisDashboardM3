@@ -59,6 +59,13 @@ header{
     border-radius: 0 0 1.2rem 1.2rem;
 }
 
+.css--tijdVak{
+    color: white;
+    font-size: 3rem;
+    background: blue;
+    width: 6vw;
+}
+
 .css--settingsTextSizeDiv{
     display: flex;
     flex-direction: column;

@@ -60,20 +60,22 @@ function rgbToHex(r, g, b) {
     return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
   }
 
-// const tijdVak = getElementById("js--tijdVak");  
+
 const tijdVak = document.getElementById("js--tijdVak");
 
-
-function tijdCalc(){
+setInterval(function(){
     var d = new Date();
 
     var uur = d.getHours();
     var minuten = d.getMinutes();
 
-    tijd = uur+":"+minuten;
+    if(minuten < 10){
+      const tijd = uur+":0"+minuten;
+      tijdVak.innerText = tijd;
+    }
+    else{
+      const tijd = uur+":"+minuten;
+      tijdVak.innerText = tijd;
+    }
+  }, 1000);
 
-  }
-
-tijdCalc();
-console.log(tijd);
-tijdVak.innerText = tijd;
