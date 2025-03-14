@@ -61,11 +61,12 @@ header{
 }
 
 .css--tijdVak{
-    border: 1px solid black;
     color: white;
-    font-size: 5rem;
+    font-size: 6rem;
     font-weight: bold;
     width: 6vw;
+    margin-top: 1rem;
+    margin-left: 6rem;
 }
 /* */
 
@@ -116,7 +117,7 @@ header{
     cursor: pointer;
 }
 
-.css--settingsColorWheel{
+.css--settingsColorWheelField{
     background-color: white;
     width: 45rem;
     height: 67.5rem;

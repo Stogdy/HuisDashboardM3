@@ -14,9 +14,15 @@ const greenColorButton = document.getElementById("js--greenColorButton");
 const redColorButton = document.getElementById("js--redColorButton");
 const blueColorButton = document.getElementById("js--blueColorButton");
 const orangeColorButton = document.getElementById("js--orangeColorButton");
+
+var greenColorButtonActive = true;
+var redColorButtonActive = false;
+var blueColorButtonActive = false;
+var orangeColorButtonActive = false;
 const header = document.getElementById("js--header");
-const footer = document.getElementById("js--footer")
-const buttons = document.getElementsByClassName("js--button")
+const footer = document.getElementById("js--footer");
+const buttons = document.getElementsByClassName("js--button");
+const activeButton = document.getElementById("js--activeButton");
 
 
 let r= parseInt(pickedColor.value.substring(1,3), 16);
@@ -34,32 +40,8 @@ function MakeHexComponentDarker(str,which,amount)
     return r;
 
 }
-// pickedColor.onchange = function(e){
-//     console.log(e.target .value);
-//     header.style.background = pickedColor.value;
 
-//     let r= MakeHexComponentDarker(pickedColor.value,1,0.6);
-//     let g= MakeHexComponentDarker(pickedColor.value,3,0.6);
-//     let b= MakeHexComponentDarker(pickedColor.value,5,0.6);
-
-//     console.log(r + " " +g + " "+b);
-//     let darker= rgbToHex(r,g,b);
-//     footer.style.background = darker;
-//     console.log("------------------------");
-
-//     for (let i = 0; i < buttons.length; i++) {
-//         const button = buttons[i];
-//     button.style.background = darker;
-        
-//     }
-
-// }
 greenColorButton.onclick = function(){
-  let r= MakeHexComponentDarker(pickedColor.value,1,0.6);
-  let g= MakeHexComponentDarker(pickedColor.value,3,0.6);
-  let b= MakeHexComponentDarker(pickedColor.value,5,0.6);
-  console.log(r + " " +g + " "+b);
-
   r= 17;
   g= 163;
   b= 37;
@@ -78,6 +60,11 @@ greenColorButton.onclick = function(){
   let footerDarker= rgbToHex(r,g,b);
   console.log(r + " " +g + " "+b);
 
+  r= 255;
+  g= 155;
+  b= 0;
+  let activeButtonColor= rgbToHex(r,g,b);
+  activeButton.style.background = activeButtonColor;
   header.style.background = headerNormal;
   footer.style.background = footerDarker;
   console.log("------------------------");
@@ -86,14 +73,10 @@ greenColorButton.onclick = function(){
       const button = buttons[i];
   button.style.background = headerLighter;
   }
+  greenColorButtonActive = true;
 }
 
 redColorButton.onclick = function(){
-  let r= MakeHexComponentDarker(pickedColor.value,1,0.6);
-  let g= MakeHexComponentDarker(pickedColor.value,3,0.6);
-  let b= MakeHexComponentDarker(pickedColor.value,5,0.6);
-  console.log(r + " " +g + " "+b);
-
   r=163;
   g=17;
   b=37;
@@ -112,6 +95,11 @@ redColorButton.onclick = function(){
   let footerDarker= rgbToHex(r,g,b);
   console.log(r + " " +g + " "+b);
 
+  r= 255;
+  g= 155;
+  b= 0;
+  let activeButtonColor= rgbToHex(r,g,b);
+  activeButton.style.background = activeButtonColor;
   header.style.background = headerNormal;
   footer.style.background = footerDarker;
   console.log("------------------------");
@@ -120,14 +108,10 @@ redColorButton.onclick = function(){
       const button = buttons[i];
   button.style.background = headerLighter;
   }
+  redColorButtonActive = true;
 }
 
 blueColorButton.onclick = function(){
-  let r= MakeHexComponentDarker(pickedColor.value,1,0.6);
-  let g= MakeHexComponentDarker(pickedColor.value,3,0.6);
-  let b= MakeHexComponentDarker(pickedColor.value,5,0.6);
-  console.log(r + " " +g + " "+b);
-
   r=37;
   g=17;
   b=163;
@@ -145,7 +129,12 @@ blueColorButton.onclick = function(){
   b= 92;
   let footerDarker= rgbToHex(r,g,b);
   console.log(r + " " +g + " "+b);
-
+  
+  r= 255;
+  g= 155;
+  b= 0;
+  let activeButtonColor= rgbToHex(r,g,b);
+  activeButton.style.background = activeButtonColor;
   header.style.background = headerNormal;
   footer.style.background = footerDarker;
   console.log("------------------------");
@@ -154,14 +143,11 @@ blueColorButton.onclick = function(){
       const button = buttons[i];
   button.style.background = headerLighter;
   }
+  blueColorButtonActive = true;
+
 }
 
 orangeColorButton.onclick = function(){
-  let r= MakeHexComponentDarker(pickedColor.value,1,0.6);
-  let g= MakeHexComponentDarker(pickedColor.value,3,0.6);
-  let b= MakeHexComponentDarker(pickedColor.value,5,0.6);
-  console.log(r + " " +g + " "+b);
-
   r=235;
   g=135;
   b=0;
@@ -180,6 +166,12 @@ orangeColorButton.onclick = function(){
   let footerDarker= rgbToHex(r,g,b);
   console.log(r + " " +g + " "+b);
 
+  r= 23; 
+  g= 184; 
+  b= 45;
+  let activeButtonColor= rgbToHex(r,g,b);
+
+  activeButton.style.background = activeButtonColor;
   header.style.background = headerNormal;
   footer.style.background = footerDarker;
   console.log("------------------------");
@@ -188,7 +180,24 @@ orangeColorButton.onclick = function(){
       const button = buttons[i];
   button.style.background = headerLighter;
   }
+  orangeColorButtonActive = true;
+
 }
+
+if(greenColorButtonActive === true){
+  document.cookie = "scheme=greenScheme; expires=Fri, 1 Jan 2100 12:00:00 UTC; path=../";
+}
+else if(redColorButtonActive === true){
+  document.cookie = "scheme=redScheme; expires=Fri, 1 Jan 2100 12:00:00 UTC; path=../";
+}
+else if(blueColorButtonActive === true){
+  document.cookie = "scheme=blueScheme; expires=Fri, 1 Jan 2100 12:00:00 UTC; path=../";
+}
+else if(orangeColorButtonActive === true){
+  document.cookie = "scheme=orangeScheme; expires=Fri, 1 Jan 2100 12:00:00 UTC; path=../";
+}
+
+console.log(orangeColorButton.cookie);
 
 function componentToHex(c) {
     var hex = c.toString(16);
