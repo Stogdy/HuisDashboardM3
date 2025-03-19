@@ -26,7 +26,6 @@ const footer = document.getElementById("js--footer");
 const buttons = document.getElementById("js--button");
 const activeButton = document.getElementById("js--activeButton");
 
-
 let r= parseInt(pickedColor.value.substring(1,3), 16);
 let g= parseInt(pickedColor.value.substring(3,5), 16);
 let b= parseInt(pickedColor.value.substring(5,7), 16);
@@ -263,6 +262,8 @@ setInterval(function(){
       tijdVak.innerText = tijd;
     }
   }, 1000);
+
+
 
 //   function setCookie(colorScheme, setScheme, exdays) {
 //     const d = new Date();

@@ -20,6 +20,14 @@ header{
     display: flex;
 }
 
+h1{
+    margin-left: 2.5%;
+    font-family: sans-serif;
+    font-weight: lighter;
+    font-size: 4rem;
+    color: #737373
+}
+
 .css--logoDiv{
     width: 100%;
     margin-top: 15%;
@@ -36,7 +44,7 @@ header{
 .css--homePilotLogoText{
     height: 7.5rem;
     padding: 0 4.5rem;
-    margin-bottom: -3rem;
+    margin-top: 1rem;
 }
 
 .css--button{
@@ -187,7 +195,50 @@ header{
 
 .css--contactArt{
     grid-row: 2 / 12;
-    grid-column: 2 / 13;
+    grid-column: 2 / 10;
+    display: flex;
+    flex-direction: column;
+}
+
+.css--contactInfoArt{
+    grid-row: 2 / 12;
+    grid-column: 10 / 13;
+}
+
+.css--contactP{
+    font-size: 3rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.css--contactNaam, .css--contactOnderwerp{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    width: 90%;
+    height: 6rem;
+    border: 1px solid #707070;
+    border-radius: 0.5rem;
+}
+
+.css--contactToelichting{
+    margin-top: 1rem;
+    width: 90%;
+    height: 25rem;
+    border: 1px solid #707070;
+    border-radius: 0.5rem;
+}
+
+.css--contactVerstuur{
+    margin-top: 2rem;
+    margin-left: 77%;
+    background: #FE9A05;
+    color: white;
+    border: none;
+    border-radius: 12rem;
+    width: 15rem;
+    padding: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
 }
 
 /* FOOTER */
