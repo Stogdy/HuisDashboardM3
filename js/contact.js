@@ -17,7 +17,7 @@ setInterval(function(){
   }, 1000);
 
 
-
+const contactArt = document.getElementById("js--contactArt");
 
 document.getElementById("js--contactVerstuur").onclick = function() {
   const contactNaam = document.getElementById("js--contactNaam").value;
@@ -30,11 +30,12 @@ document.getElementById("js--contactVerstuur").onclick = function() {
     alert("vul aub alles in");
   }
   else{
-  console.log(contactFormulier);
-
-  document.getElementById("js--contactNaam").value = "";
-  document.getElementById("js--contactOnderwerp").value = "";
-  document.getElementById("js--contactToelichting").value = "";
+    console.log(contactFormulier);
+    contactArt.style.display = "none";
+    
+    // document.getElementById("js--contactNaam").value = "";
+    // document.getElementById("js--contactOnderwerp").value = "";
+    // document.getElementById("js--contactToelichting").value = "";
   }
 };
 

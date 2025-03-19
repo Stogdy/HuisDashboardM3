@@ -5,6 +5,7 @@
 
 html{
     font-size: 62.5%;
+    overflow: hidden
 }
 
 body{
@@ -31,6 +32,12 @@ h1{
 
 .css--homePilotLogo{
     width: 45rem;
+}
+
+/* LOADING */
+.loadingImg{
+    height: 100vh;
+    width: 100vw;
 }
 
 /*HEADER*/
@@ -112,22 +119,22 @@ header{
 }
 
 .css--BRArt{
-    grid-row: 3 / 12;
+    grid-row: 3 / 11;
     grid-column: 5 / 8
 }
 
 .css--SUSDArt{
-    grid-row: 3 / 8;
+    grid-row: 3 / 7;
     grid-column: 8 / 11;
 }
 
 .css--graphArt{
-    grid-row: 8 / 12;
+    grid-row: 7 / 11;
     grid-column: 8 / 12;
     border-radius: 1.2rem 0 0 1.2rem;
 }
 .css--KWArt{
-    grid-row: 3 / 12;
+    grid-row: 3 / 11;
     grid-column: 11 / 13;
     border-radius: 1.2rem 1.2rem 1.2rem 0;
 }
