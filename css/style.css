@@ -13,13 +13,6 @@ body{
     background-color: #f0f0f0;
 }
 
-header{
-    width: 100vw;
-    max-height: 10rem;
-    background-color:#11A325;
-    display: flex;
-}
-
 h1{
     margin-left: 2.5%;
     font-family: sans-serif;
@@ -40,11 +33,21 @@ h1{
     width: 45rem;
 }
 
-/*header*/
+/*HEADER*/
+
+header{
+    width: 100vw;
+    max-height: 10rem;
+    background-color:#11A325;
+    display: flex;
+}
+
 .css--homePilotLogoText{
     height: 7.5rem;
     padding: 0 4.5rem;
     margin-top: 1rem;
+    grid-row: 1 / 1;
+    grid-column: 1 / 1;
 }
 
 .css--button{
@@ -60,8 +63,10 @@ h1{
 
 .css--activeButton{
     background-color: #FE9A05;
-    height: 13rem;
+    height: 12rem;
     border-radius: 0 0 1.2rem 1.2rem;
+    position:sticky;
+    z-index: 1;
 }
 
 .css--tijdVak{
@@ -92,28 +97,39 @@ h1{
 
 /* GRAFIEKEN */
 
+.css--weerBalkArt{
+    grid-row: 1 / 3;
+    grid-column: 1 / 14;
+}
+.weatherwidget-io{
+    margin-top: 2rem;
+    border-radius: 1.2rem;
+}
+
 .css--WDataArt{
-    grid-row: 4 / 11;
+    grid-row: 3 / 11;
     grid-column: 2 / 5;
 }
 
 .css--BRArt{
-    grid-row: 4 / 12;
+    grid-row: 3 / 12;
     grid-column: 5 / 8
 }
 
 .css--SUSDArt{
-    grid-row: 4 / 8;
+    grid-row: 3 / 8;
     grid-column: 8 / 11;
 }
 
 .css--graphArt{
     grid-row: 8 / 12;
-    grid-column: 8 / 11;
+    grid-column: 8 / 12;
+    border-radius: 1.2rem 0 0 1.2rem;
 }
 .css--KWArt{
-    grid-row: 4 / 12;
+    grid-row: 3 / 12;
     grid-column: 11 / 13;
+    border-radius: 1.2rem 1.2rem 1.2rem 0;
 }
 
 /* SETTINGS */

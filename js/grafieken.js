@@ -16,6 +16,9 @@ setInterval(function(){
     }
   }, 1000);
 
+  !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+
+
 //   function setCookie(colorScheme, setScheme, exdays) {
 //     const d = new Date();
 //     d.setTime(d.getTime() + (exdays*24*60*60*1000));
