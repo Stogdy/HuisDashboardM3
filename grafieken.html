@@ -5,19 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/main.js" defer></script>
-
     <title>Document</title>
 </head>
 <body>
 
-    <header>
+    <header id="js--header">
         <img class="css--homePilotLogoText" src="Images/Logo/homepilot.png" alt="">
         <a href="grafieken.html"><button class="css--button css--activeButton" id="js--activeButton">Grafieken</button></a>
-        <a href="settings.html"><button class="css--button js--button">Instellingen</button></a>
-        <a href="contact.html"><button class="css--button js--button ">Contact</button></a>
+        <a href="settings.html"><button class="css--button" id="js--button">Instellingen</button></a>
+        <a href="contact.html"><button class="css--button" id="js--button">Contact</button></a>
         <article class="css--tijdVak" id="js--tijdVak"></article>
     </header>
-    <main>
+    <main id="js--grafMain" class="css--settingsMain">
+
+        <article class="css--WDataArt css--article">
+            <!-- <IFRAME SRC="https://gadgets.buienradar.nl/gadget/radarfivedays" 
+            NORESIZE SCROLLING=NO HSPACE=0 VSPACE=0 FRAMEBORDER=0 MARGINHEIGHT=0 MARGINWIDTH=0 WIDTH=256 HEIGHT=406></IFRAME> -->
+        </article>
+        <article class="css--BRArt css--article"></article>
+        <article class="css--SUSDArt css--article"></article>
+        <article class="css--graphArt css--article"></article>
+        <article class="css--KWArt css--article"></article>
+
     </main>
     <footer>
         <p>HomePilot | Adres: Contactweg 36, Amsterdam | Telefoonnummer: +31 06 97395610 | Email: info@homepilot.com</p>

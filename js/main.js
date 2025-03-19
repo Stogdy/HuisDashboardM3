@@ -23,7 +23,7 @@ var orangeColorButtonActive = false;
 var camoColorButtonActive = false;
 const header = document.getElementById("js--header");
 const footer = document.getElementById("js--footer");
-const buttons = document.getElementsByClassName("js--button");
+const buttons = document.getElementById("js--button");
 const activeButton = document.getElementById("js--activeButton");
 
 
@@ -116,13 +116,13 @@ redColorButton.onclick = function(){
 blueColorButton.onclick = function(){
   r=37;
   g=17;
-  b=163;
+  b=153;
   let headerNormal= rgbToHex(r,g,b);
   console.log(r + " " +g + " "+b);
 
-  r= 45;
-  g= 23;
-  b= 204;
+  r= 65;
+  g= 43;
+  b= 224;
   let headerLighter= rgbToHex(r,g,b);
   console.log(r + " " +g + " "+b);
 
@@ -182,8 +182,7 @@ orangeColorButton.onclick = function(){
       const button = buttons[i];
   button.style.background = headerLighter;
   }
-  orangeColorButtonActive = true;
-
+  setCookie("colorscheme", "rgb(23, 184, 45)", 365);
 }
 
 camoColorButton.onclick = function(){
@@ -220,7 +219,8 @@ camoColorButton.onclick = function(){
   button.style.background = headerLighter;
   }
   camoColorButtonActive = true;
-
+  let colors = []
+  setCookie("colorscheme", "rgb(255, 255, 255)", 365);
 }
 
 // if(greenColorButtonActive === true){
@@ -232,9 +232,7 @@ camoColorButton.onclick = function(){
 // else if(blueColorButtonActive === true){
 //   document.cookie = "scheme=blueScheme; expires=Fri, 1 Jan 2100 12:00:00 UTC; path=../";
 // }
-// else if(orangeColorButtonActive === true){
-//   document.cookie = "scheme=orangeScheme; expires=Fri, 1 Jan 2100 12:00:00 UTC; path=../";
-// }
+
 
 // console.log(orangeColorButton.cookie);
 
@@ -266,3 +264,37 @@ setInterval(function(){
     }
   }, 1000);
 
+//   function setCookie(colorScheme, setScheme, exdays) {
+//     const d = new Date();
+//     d.setTime(d.getTime() + (exdays*24*60*60*1000));
+//     let expires = "expires="+ d.toUTCString();
+//     document.cookie = colorScheme + "=" + setScheme + ";" + expires + ";path=/";
+//   }
+  
+//   function getCookie(colorScheme) {
+//     let name = colorScheme + "=";
+//     let decodedCookie = decodeURIComponent(document.cookie);
+//     let ca = decodedCookie.split(';');
+//     for(let i = 0; i <ca.length; i++) {
+//       let c = ca[i];
+//       while (c.charAt(0) == ' ') {
+//         c = c.substring(1);
+//       }
+//       if (c.indexOf(name) == 0) {
+//         return c.substring(name.length, c.length);
+//       }
+//     }
+//     return "";
+//   }
+
+// function checkCookie() {
+//   let user = getCookie("username");
+//   if (user != "") {
+//     alert("Welcome again " + user);
+//   } else {
+//     user = prompt("Please enter your name:", "");
+//     if (user != "" && user != null) {
+//       setCookie("username", user, 365);
+//     }
+//   }
+// }
