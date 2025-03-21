@@ -40,8 +40,6 @@ div{
     color: green;
 }
 
-<<<<<<< Updated upstream
-=======
 .css--activeButton{
     background-color: #FE9A05;
     height: 12rem;
@@ -199,7 +197,7 @@ div{
 }
 .css--sunPicturesContainer {
     display: flex;
-    justify-content: space-between; /* Adjust spacing between the pictures */'
+    justify-content: space-between; /* Adjust spacing between the pictures */
     align-items: center; /* Align items vertically */
     gap: 4rem; /* Increase space between the pictures */
     padding: 2rem; /* Optional: Add padding inside the container */
@@ -273,7 +271,6 @@ h3 {
 
 /* FOOTER */
 
->>>>>>> Stashed changes
 footer{
     background: rgb(26, 92, 48);
     color: white;
