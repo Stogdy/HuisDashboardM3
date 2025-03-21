@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <article class="css--tijd" id="js--tijd"></article>
+    <script>
+        const tijd = document.getElementById("js--tijd");
+        
+        setInterval( function(){
+            var datum = new Date();
+            var uur = datum.getHours();
+            var minuten = datum.getMinutes();
+
+            const tijd = uur+":"+minuten;
+            tijd.innerText = tijd;
+
+            console.log(tijd);
+        }, 1000);
+
+    </script>
+</body>
+</html>

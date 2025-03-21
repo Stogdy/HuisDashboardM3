@@ -4,30 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/main.js" defer></script>
+    <script src="js/settings.js" defer></script>
     <title>Document</title>
 </head>
-<body>
+<body> <!-- onload="checkCookie()"--> 
 
     <header id="js--header">
         <img class="css--homePilotLogoText" src="Images/Logo/homepilot.png" alt="">
-        <a href="grafieken.html"><button class="css--button js--button">Grafieken</button></a>
-        <a href="settings.html"><button class="css--button css--activeButton">Instellingen</button></a>
-        <a href="contact.html"><button class="css--button js--button">Contact</button></a>
-        <div id="js--tijdVak"></div>
+        <a href="grafieken.html"><button class="css--button" id="js--button">Grafieken</button></a>
+        <a href="settings.html"><button class="css--button css--activeButton" id="js--activeButton">Instellingen</button></a>
+        <a href="contact.html"><button class="css--button" id="js--button">Contact</button></a>
+        <article class="css--tijdVak" id="js--tijdVak"></article>
     </header>
 
     <main id="js--settingsMain" class="css--settingsMain">
-        <div class="css--settingsTextSizeDiv">
-            <article class="css--settingsTextSizeText"><h2>Tekstgrootte</h2></article>
+        <article class="css--settingsTextArt css--article">
+            <h2>Tekstgrootte</h2>
+        </article>
 
-            <article class="css--settingsTextSizeSlider">
-                <input id="js--slider" type="range" min="1" max="5" step="1">
-            </article>
+        <article class="css--settingsSliderArt css--article">
+            <input id="js--slider" type="range" min="1" max="5" step="1">
+        </article>
 
-        </div>
-        <article class="css--settingsColorWheel">
-            <input type="color" id="js--colorPicker" class="css--colorPicker" value="#11A325">
+        <article class="css--settingsColorArt css--article">
+            <input type="button" id="js--greenColorButton" class="css--colorButton css--greenColorButton">
+            <input type="button" id="js--redColorButton" class="css--colorButton  css--redColorButton">
+            <input type="button" id="js--blueColorButton" class="css--colorButton  css--blueColorButton">
+            <input type="button" id="js--orangeColorButton" class="css--colorButton  css--orangeColorButton">
+            <input type="button" id="js--camoColorButton" class="css--colorButton  css--camoColorButton">
+
         </article>
     </main>
 
@@ -37,3 +42,4 @@
     
 </body>
 </html>
+<input type="color" id="js--colorPicker" class="css--colorPicker" value="#11A325">

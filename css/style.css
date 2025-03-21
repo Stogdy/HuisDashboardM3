@@ -5,6 +5,7 @@
 
 html{
     font-size: 62.5%;
+    overflow: hidden
 }
 
 body{
@@ -13,14 +14,12 @@ body{
     background-color: #f0f0f0;
 }
 
-header{
-    width: 100vw;
-    max-height: 10rem;
-    background-color:#11A325;
-}
-
-.css--settingsMain{
-    display: flex;
+h1{
+    margin-left: 2.5%;
+    font-family: sans-serif;
+    font-weight: lighter;
+    font-size: 4rem;
+    color: #737373
 }
 
 .css--logoDiv{
@@ -35,10 +34,27 @@ header{
     width: 45rem;
 }
 
+/* LOADING */
+.loadingImg{
+    height: 100vh;
+    width: 100vw;
+}
+
+/*HEADER*/
+
+header{
+    width: 100vw;
+    max-height: 10rem;
+    background-color:#11A325;
+    display: flex;
+}
+
 .css--homePilotLogoText{
     height: 7.5rem;
     padding: 0 4.5rem;
-    margin-bottom: -3rem;
+    margin-top: 1rem;
+    grid-row: 1 / 1;
+    grid-column: 1 / 1;
 }
 
 .css--button{
@@ -46,7 +62,6 @@ header{
     border: none;
     width: 36rem;
     height: 10rem;
-    margin-top: -1.5rem;
     margin-right: 2rem;
     color: white;
     font-size: 4rem;
@@ -55,47 +70,108 @@ header{
 
 .css--activeButton{
     background-color: #FE9A05;
-    height: 13rem;
+    height: 12rem;
     border-radius: 0 0 1.2rem 1.2rem;
+    position:sticky;
+    z-index: 1;
 }
 
-.css--settingsTextSizeDiv{
-    display: flex;
-    flex-direction: column;
+.css--tijdVak{
+    color: white;
+    font-size: 6rem;
+    font-weight: bold;
+    width: 6vw;
+    margin-top: 1rem;
+    margin-left: 6rem;
 }
-.css--settingsTextSizeText{
+
+/* ALGEMEEN */
+
+.css--grafMain, .css--settingsMain, .css--contactMain{
+    display:grid;
+    min-height: 85vh;
+    grid-template-columns: repeat(13, 1fr);
+    grid-template-rows: repeat(13, 1fr);
+    gap: 2rem;
+}
+
+.css--article{
+    box-shadow: 0.5rem 0.5rem 1rem 0 #acacac;
     background-color: white;
-    width: 95rem;
-    height: 32rem;
     border-radius: 1.2rem;
-    margin-top: 3rem;
-    margin-left: 22rem;
+    height: 100%;
 }
-.css--settingsTextSizeText > h2{
+
+/* GRAFIEKEN */
+
+.css--weerBalkArt{
+    grid-row: 1 / 3;
+    grid-column: 1 / 14;
+}
+.weatherwidget-io{
+    margin-top: 2rem;
+    border-radius: 1.2rem;
+}
+
+.css--WDataArt{
+    grid-row: 3 / 11;
+    grid-column: 2 / 5;
+}
+
+.css--BRArt{
+    grid-row: 3 / 11;
+    grid-column: 5 / 8
+}
+
+.css--SUSDArt{
+    grid-row: 3 / 7;
+    grid-column: 8 / 11;
+}
+
+.css--graphArt{
+    grid-row: 7 / 11;
+    grid-column: 8 / 12;
+    border-radius: 1.2rem 0 0 1.2rem;
+}
+.css--KWArt{
+    grid-row: 3 / 11;
+    grid-column: 11 / 13;
+    border-radius: 1.2rem 1.2rem 1.2rem 0;
+}
+
+/* SETTINGS */
+
+.css--settingsTextArt{
+    grid-row: 2 / 7;
+    grid-column: 2 / 9;
+}
+
+.css--settingsTextArt > h2{
     text-align: center;
-    margin-top: 12rem;
+    margin-top: 11%;
 }
 
-.css--settingsTextSizeSlider{
-    background-color: white;
-    width: 95rem;
-    height: 32rem;
-    border-radius: 1.2rem;
-    margin-top: 3rem;
-    margin-left: 22rem;
+.css--settingsSliderArt{
+    grid-row: 7 / 12;
+    grid-column: 2 / 9;
 }
 
-.css--settingsTextSizeSlider > input{
-    margin-top: 14rem;
-    margin-left: 7.5rem;
+.css--settingsColorArt{
+    grid-row: 2 / 12;
+    grid-column: 9 / 13;
+}
+
+.css--settingsSliderArt > input{
+    margin-top: 11%;
+    margin-left: 10%;
     -webkit-appearance: none;
     appearance: none;
-    width: 80rem;
-    height: 4rem;
+    width: 80%;
+    height: 12%;
     border-radius: 0.6rem;
     border: 0.4rem solid #acacac; 
 }
-.css--settingsTextSizeSlider > input::-webkit-slider-thumb {
+.css--settingsSliderArt > input::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     background: #FE9A05;
@@ -106,19 +182,89 @@ header{
     cursor: pointer;
 }
 
-.css--settingsColorWheel{
-    background-color: white;
-    width: 45rem;
-    height: 67.5rem;
-    border-radius: 1.2rem;
-    margin-top: 3rem;
-    margin-left: 3rem;
-}
 .css--colorPicker{
     width: 10rem;
     height: 10rem;
     border: none;
+    display:none;
 }
+.css--colorButton{
+    border: none;
+    border-radius: 1.2rem;
+    cursor: pointer;
+}
+.css--redColorButton{
+    padding: 5rem 5rem;
+    background: red;
+}
+.css--blueColorButton{
+    padding: 5rem 5rem;
+    background: blue;
+}
+.css--greenColorButton{
+    padding: 5rem 5rem;
+    background: green;
+}
+.css--orangeColorButton{
+    padding: 5rem 5rem;
+    background: orange;
+}
+.css--camoColorButton{
+    padding: 5rem 5rem;
+    background: linear-gradient(rgb(82, 117, 82), rgb(224, 224, 187));
+}
+
+/* CONTACT */
+
+.css--contactArt{
+    grid-row: 2 / 12;
+    grid-column: 2 / 10;
+    display: flex;
+    flex-direction: column;
+}
+
+.css--contactInfoArt{
+    grid-row: 2 / 12;
+    grid-column: 10 / 13;
+}
+
+.css--contactP{
+    font-size: 3rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.css--contactNaam, .css--contactOnderwerp{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    width: 90%;
+    height: 6rem;
+    border: 1px solid #707070;
+    border-radius: 0.5rem;
+}
+
+.css--contactToelichting{
+    margin-top: 1rem;
+    width: 90%;
+    height: 25rem;
+    border: 1px solid #707070;
+    border-radius: 0.5rem;
+}
+
+.css--contactVerstuur{
+    margin-top: 2rem;
+    margin-left: 77%;
+    background: #FE9A05;
+    color: white;
+    border: none;
+    border-radius: 12rem;
+    width: 15rem;
+    padding: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* FOOTER */
 
 footer{
     background: #425C3B;
