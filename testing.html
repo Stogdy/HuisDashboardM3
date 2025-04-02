@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .pie-chart {
+            background:
+                radial-gradient(
+                    circle closest-side,
+                    white 0,
+                    white 30%,
+                    transparent 30%,
+                    transparent 50%,
+                    white 0
+                ),
+                conic-gradient(
+                    #db0000 0,
+                    #db0000 8.3%,
+                    #f2712c 0,
+                    #f2712c 16.6%,
+                    #ff9500 0,
+                    #ff9500 24.9%,
+                    #ffbb00 0,
+                    #ffbb00 33.2%,
+                    #fff700 0,
+                    #fff700 41.5%,
+                    #b3e401 0,
+                    #b3e401 49.8%,
+                    #5ccc00 0,
+                    #5ccc00 58.1%,
+                    #00e1ff 0,
+                    #00e1ff 66.4%,
+                    #0069bd 0,
+                    #0069bd 74.7%,
+                    #6e00db 0,
+                    #6e00db 83%,
+                    #8e00c2 0,
+                    #8e00c2 91.3%,
+                    #e600bb 0,
+                    #e600bb 99.6%
+            );
+            position: relative;
+            width: 500px;
+            min-height: 350px;
+            margin: 0;
+        }
+
+        .pie-chart span:after {
+            display: inline-block;
+            content: "";
+            width: 0.8em;
+            height: 0.8em;
+            margin-left: 0.4em;
+            height: 0.8em;
+            border-radius: 0.2em;
+            background: currentColor;
+        }
+    </style>
+    <figure class="pie-chart"></figure>
+</body>
+</html>

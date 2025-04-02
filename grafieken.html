@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./sunupdown/css/grafieken.css">
+    <script src="js/grafieken.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <header id="js--header">
+        <img class="css--homePilotLogoText" src="Images/Logo/homepilot.png" alt="">
+        <a href="grafieken.html"><button class="css--button css--activeButton" id="js--activeButton">Grafieken</button></a>
+        <a href="settings.html"><button class="css--button" id="js--button">Instellingen</button></a>
+        <a href="contact.html"><button class="css--button" id="js--button">Contact</button></a>
+        <article class="css--tijdVak" id="js--tijdVak"></article>
+    </header>
+    <main id="js--grafMain" class="css--settingsMain">
+
+        <article class="css--weerBalkArt css--article">
+            <a class="weatherwidget-io" href="https://forecast7.com/nl/52d374d90/amsterdam/" data-label_1="AMSTERDAM" data-label_2="WEER" data-font="Helvetica" data-icons="Climacons Animated" data-theme="pure" >AMSTERDAM WEER</a>
+                <!-- https://weatherwidget.io -->
+        </article>
+        
+        <article class="css--WDataArt css--article">
+            <!-- <IFRAME SRC="https://gadgets.buienradar.nl/gadget/radarfivedays" 
+            NORESIZE SCROLLING=NO HSPACE=0 VSPACE=0 FRAMEBORDER=0 MARGINHEIGHT=0 MARGINWIDTH=0 WIDTH=256 HEIGHT=406></IFRAME> -->
+        </article>
+        <article class="css--BRArt css--article"></article>
+        <article class="css--SUSDArt css--article">
+
+            <img class="zon opgang" src="sunupdown/Images/sundown.png" alt="dit is de zonsondergang">
+            <img class="zon ondergang" src="sunupdown/Images/sunup.jpg" alt="dit is de zonsopgang">
+
+            <h3 class="sunrise2" id="sunset">Sunset: --:--</h3>
+            <h3 class="sunrise1" id="sunrise">Sunrise: --:--</h3>
+            
+
+            
+        </article>
+        <article class="css--graphArt css--article"></article>
+        <article class="css--KWArt css--article">
+
+            <h1 class="headerz">Opbrengst zonnepanelen</h1>
+
+            <div class="bovenZ">4.7 KW</div>
+
+            <h1 class="headerz">Verbruik energie</h1>
+            <div class="bovenZ">3 KW</div>
+
+        </article>
+
+
+    </main>
+    <footer>
+        <p>HomePilot | Adres: Contactweg 36, Amsterdam | Telefoonnummer: +31 06 97395610 | Email: info@homepilot.com</p>
+    </footer>
+    
+</body>
+
+</html>
