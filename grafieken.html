@@ -26,13 +26,13 @@
             <IFRAME SRC="https://gadgets.buienradar.nl/gadget/radarfivedays" 
             NORESIZE SCROLLING=NO HSPACE=0 VSPACE=0 FRAMEBORDER=0 MARGINHEIGHT=0 MARGINWIDTH=0 WIDTH=256 HEIGHT=406></IFRAME>
         </article>
-        <article class="css--BRArt css--article">
+        <article class="css--BRArt css--article"></article>
+        <article class="css--SUSDArt css--article"></article>
+        <article class="css--graphArt css--article">
             <div>
-                <canvas id="myChart"></canvas>
+                <canvas id="myChart" height="200"></canvas>
               </div>
         </article>
-        <article class="css--SUSDArt css--article"></article>
-        <article class="css--graphArt css--article"></article>
         <article class="css--KWArt css--article"></article>
 
     </main>
@@ -45,25 +45,27 @@
 <script>
     const ctx = document.getElementById('myChart');
   
-    new Chart(ctx, {
-      type: 'bar',
-      data: {
-        labels: ['Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag', 'Zaterdag' , 'Zondag'],
-        // labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [{
-          label: 'Temperatuur',
-          data: [12, 19, 3, 5, 2, 90, 10],
-          borderWidth: 1,
-          backgroundColor: 'rgba(255, 99, 132, 0.2)',
-        }]
-      },
-      options: {
-        scales: {
-          y: {
-            beginAtZero: true
-          }
-        }
+
+new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels: ['Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag', 'Zaterdag', 'Zondag'],
+    datasets: [{
+      label: 'Temperatuur',
+      data: [12, 19, 3, 5, 2, 90, 10],
+      borderWidth: 1,
+      backgroundColor: 'rgba(255, 99, 132, 0.2)',
+    }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false, // Belangrijk!
+    scales: {
+      y: {
+        beginAtZero: true
       }
-    });
+    }
+  }
+});
   </script>
 </html>
