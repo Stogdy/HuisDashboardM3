@@ -18,6 +18,19 @@ setInterval(function(){
 
   !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
 
+  setInterval(() => {
+    fetch("https://39323.hosts2.ma-cloud.nl/duurzaamhuis/get.php")
+      .then(response => response.json())
+      .then(data => {
+        console.log("Sensor data:", data);
+        document.getElementById("js--temp").innerText = data.temperature + "°C";
+        document.getElementById("js--humidity").innerText = data.humidity + "%";
+        document.getElementById("js--licht").innerText = data.light;
+      })
+      .catch(err => console.error("Fout bij ophalen JSON:", err));
+  }, 5000);
+  
+
 //   function setCookie(colorScheme, setScheme, exdays) {
 //     const d = new Date();
 //     d.setTime(d.getTime() + (exdays*24*60*60*1000));
