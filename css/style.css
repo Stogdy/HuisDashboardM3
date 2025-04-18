@@ -130,13 +130,14 @@ header{
 
 .css--graphArt{
     grid-row: 7 / 11;
-    grid-column: 8 / 12;
-    border-radius: 1.2rem 0 0 1.2rem;
+    grid-column: 8 / 11;
+    border-radius: 1.2rem;
 }
+
 .css--KWArt{
     grid-row: 3 / 11;
     grid-column: 11 / 13;
-    border-radius: 1.2rem 1.2rem 1.2rem 0;
+    border-radius: 1.2rem;
 }
 
 /* SETTINGS */
@@ -279,3 +280,12 @@ footer{
     position: fixed;
     bottom: 0;
 }
+
+.css--BRArt
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
